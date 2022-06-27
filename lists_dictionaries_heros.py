@@ -18,11 +18,21 @@ franchise = {
     'marvel' : ['Hulk', 'Thor', 'Black Widow']
 }
 z = [ {'x': 10, 'y': 20} ]
-#1.) How would you change the value 10 in x to 15?  Once you're done x should then be [ [5,2,3], [15,8,9] ].  
+#1.) How would you change the value 10 in x to 15?  Once you're done x should then be [ [5,2,3], [15,8,9] ]. 
+for lst in x:
+    for item in lest:
+        if item==10:
+            item=15
+    return x
 #2.) How would you change the hero_name of the first hero from 'Batman' to "Dark Knight"?
+hero[0]['hero_name']='Dark Knight'
 #3.) For the franchise dictionary, how would you change 'Aquaman' to 'Daredevil'?
+for vals in franchise.dc.value():
+    if vals=='Aquaman':
+        vals='Daredevil'
+    return franchise
 #4.) For z, how would you change the value 20 to 30?
-
+z[0]['y']=30
 #-----------------------------------------------------------------
 #Problem 2
 #Create a function that given a list of dictionaries, it loops through each dictionary in the list and prints each key and the associated value.  
@@ -34,7 +44,11 @@ superheros = [
     {'real_name': 'Bruce Banner', 'hero_name': 'The Incredible Hulk'},
     {'real_name': 'Diana Prince', 'hero_name': 'Wonder Woman'}
 ]
+def terateDictionary(dictlist):
+    for dct in dictlist:
+        print('real_name - '+dct['real_name']+', hero_name - '+dct[' hero_name'])
 
+iterateDictionary(superheros)
 #iterateDictionary(superheros) should output
 
 #real_name - Steve Rogers, hero_name - Captain America
@@ -52,7 +66,10 @@ superheros = [
 #Barry Allan
 #Bruce Banner
 #Diana Prince
-
+def iterateDictionary2(call_name, dictlist2):
+    for item in dictlist2:
+        if call_name in item:
+            print item[call_name]
 
 #-----------------------------------------------------------------
 #Problem 4
