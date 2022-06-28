@@ -69,8 +69,9 @@ iterateDictionary(superheros)
 def iterateDictionary2(call_name, dictlist2):
     for item in dictlist2:
         if call_name in item:
-            print item[call_name]
-
+            print(item[call_name])
+            
+iterateDictionary2('real_name', superheros)
 #-----------------------------------------------------------------
 #Problem 4
 #Create a function that prints the name of each disney and pixar movie and also how many movies each category currently has.
@@ -79,6 +80,14 @@ movie_collection = {
     'disney': ['Cinderella', 'Encanto', 'Little Mermaid', 'Tangled', 'Beauty & The Beast', 'Lion King', '101 Dalmations'],
     'pixar': ['Toy Story', 'Monsters, Inc.', 'Up', 'Finding Nemo', 'Coco', 'Wall-E', 'The Incredibles', 'Inside Out']
 }
+def movielist(dict):
+    for lstname, moviename in dict.items():
+        print(str(len(moviename))+' '+lstname.upper())
+        for item in moviename:
+            print('- ', item)
+        print('')
+
+movielist(movie_collection)
 
 #Expected Outpout
 #7 DISNEY
